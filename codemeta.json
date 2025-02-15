@@ -1,0 +1,24 @@
+{
+  "name": "State-of-the-Art",
+  "@context": "https://w3id.org/codemeta/3.0",
+  "author": [
+    {
+      "familyName": "𝐒𝐭𝐚𝐫𝐬𝐭𝐮𝐟𝐟",
+      "id": "_:author_1",
+      "givenName": "𝐎𝐧𝐞",
+      "type": "Person"
+    }
+  ],
+  "codeRepository": "https://github.com/OneFineStarstuff/State-of-the-Art",
+  "dateCreated": "2024-12-31",
+  "description": "Algorithms",
+  "issueTracker": "https://github.com/OneFineStarstuff/State-of-the-Art/issues",
+  "keywords": [
+    "AI"
+  ],
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": [
+    "Python 3"
+  ],
+  "type": "SoftwareSourceCode"
+}

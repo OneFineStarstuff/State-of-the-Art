@@ -1,0 +1,12 @@
+title: State-of-the-Art
+authors:
+  - given-names: 𝐎𝐧𝐞
+    family-names: 𝐒𝐭𝐚𝐫𝐬𝐭𝐮𝐟𝐟
+cff-version: 1.2.0
+message: If you use this software, please cite it using the metadata from this file.
+type: software
+abstract: Algorithms
+keywords:
+  - AI
+license: MIT
+repository-code: https://github.com/OneFineStarstuff/State-of-the-Art
