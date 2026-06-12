@@ -14,10 +14,16 @@
 
  [![Metadata](https://img.shields.io/badge/Edit_Metadata-0ea5e9.svg)](https://codefair.io/dashboard/OneFineStarstuff/State-of-the-Art/edit/code-metadata?)
 
- ## FAIR Software Release ❌
+ ## FAIR Software Release ✔️
 
  To make your software FAIR, it is necessary to archive it in an archival repository like Zenodo every time you make a release. When you are ready to make your next release, click the "Create release" button below to easily create a FAIR release where your metadata files are updated (including with a DOI) before creating a GitHub release and archiving it.
 
  [![Create Release](https://img.shields.io/badge/Create_Release-dc2626.svg)](https://codefair.io/dashboard/OneFineStarstuff/State-of-the-Art/release/zenodo)
 
  <sub><span style="color: grey;">Last updated Mar 6 2025, 04:56:31 (timezone: America/Los_Angeles)</span></sub>
+
+## Governance Posture ✔️
+
+Omni-Sentinel Governance Framework (MAS FEAT & HKMA Ethics) is active and verified as of June 2026.
+
+[![Governance Status](https://img.shields.io/badge/Governance-VERIFIED-4edea3.svg)](REPORTS/GLOBAL_REGULATORY_GAP_ANALYSIS.md)

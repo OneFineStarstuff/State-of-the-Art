@@ -23,3 +23,12 @@ To make your software FAIR, it is necessary to archive it in an archival reposit
 [![Create Release](https://img.shields.io/badge/Create_Release-dc2626.svg)](https://codefair.io/dashboard/OneFineStarstuff/State-of-the-Art/release/zenodo)
 
 <sub><span style="color: grey;">Last updated Feb 17 2025, 07:02:56 (timezone: America/Los_Angeles)</span></sub>
+
+## Omni-Sentinel Governance Framework
+
+This repository includes the **Omni-Sentinel** institutional governance framework for AGI/ASI containment, featuring:
+- **MAS FEAT Compliance:** ZK-Fairness proofs for MoE nodes.
+- **HKMA Ethics Compliance:** ASA Interpretability via CAE.
+- **Systemic Safety:** OmegaActual BIOS-level dead-man's switch.
+
+See [GLOBAL_REGULATORY_GAP_ANALYSIS.md](REPORTS/GLOBAL_REGULATORY_GAP_ANALYSIS.md) for the technical roadmap.
