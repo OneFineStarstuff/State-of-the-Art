@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omni-sentinel-24h-monitor
+  namespace: sentinel
+  labels:
+    app: omni-sentinel-monitor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: omni-sentinel-monitor
+  template:
+    metadata:
+      labels:
+        app: omni-sentinel-monitor
+    spec:
+      containers:
+      - name: monitor
+        image: sentinel-internal/omni-monitor:v1.2.0
+        env:
+        - name: MONITOR_INTERVAL
+          value: "300"
+        - name: CHECKPOINT_INTERVAL
+          value: "3600"
+        - name: INCIDENT_ID
+          value: "ALPHA-TRADE-V9-2026-001"
+        - name: LOG_PATH
+          value: "/var/log/sentinel"
+        volumeMounts:
+        - name: sentinel-logs
+          mountPath: /var/log/sentinel
+      volumes:
+      - name: sentinel-logs
+        emptyDir: {}

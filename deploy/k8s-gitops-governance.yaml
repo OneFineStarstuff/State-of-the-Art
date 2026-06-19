@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: omni-sentinel-governance
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/OneFineStarstuff/State-of-the-Art.git'
+    targetRevision: HEAD
+    path: k8s
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: sentinel
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    managedNamespaceMetadata:
+      labels:
+        sentinel-governance: enabled
+        pqc-signing: enforced
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sentinel-sidecar-config
+  namespace: sentinel
+data:
+  sidecar.yaml: |
+    containers:
+    - name: sentinel-sidecar
+      image: sentinel-internal/sidecar:v2.5.0
+      securityContext:
+        runAsNonRoot: true
+        allowPrivilegeEscalation: false
+      volumeMounts:
+      - name: pqc-audit-worm
+        mountPath: /var/log/sentinel
+    volumes:
+    - name: pqc-audit-worm
+      emptyDir: {}
