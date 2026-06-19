@@ -29,7 +29,7 @@ class ZKMLPipelineVerifier:
 
         passed = max_diff <= self.threshold
 
-        proof_id = hashlib.sha256(f"proof_{time.time()}".encode()).hexdigest()[:16]
+        proof_id = hashlib.sha3_512(f"proof_{time.time()}".encode()).hexdigest()[:16]
         proof = {
             "proof_id": proof_id,
             "type": "Groth16",
@@ -49,7 +49,7 @@ class ZKMLPipelineVerifier:
         if not self.proofs:
             return None
 
-        agg_id = hashlib.sha256(f"agg_{time.time()}".encode()).hexdigest()[:16]
+        agg_id = hashlib.sha3_512(f"agg_{time.time()}".encode()).hexdigest()[:16]
         return {
             "aggregation_id": agg_id,
             "count": len(self.proofs),
