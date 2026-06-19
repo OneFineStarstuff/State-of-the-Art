@@ -39,12 +39,12 @@ class ASADriftMonitor:
         """
         Creates a Contextual Attribution Envelope (CAE) for interpretability.
         """
-        attribution_id = hashlib.sha256(f"cae_{agent_id}_{time.time()}".encode()).hexdigest()[:16]
+        attribution_id = hashlib.sha3_512(f"cae_{agent_id}_{time.time()}".encode()).hexdigest()[:16]
         return {
             "attribution_id": attribution_id,
             "agent_id": agent_id,
             "context": metadata.get("context", "financial_trading"),
-            "intent_hash": hashlib.sha256(str(intent_vector).encode()).hexdigest(),
+            "intent_hash": hashlib.sha3_512(str(intent_vector).encode()).hexdigest(),
             "causal_link": "expert_node_selection_v4",
             "hkma_ethics_verified": True
         }

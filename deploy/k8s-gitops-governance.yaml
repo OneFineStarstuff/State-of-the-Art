@@ -33,7 +33,12 @@ data:
       image: sentinel-internal/sidecar:v2.5.0
       securityContext:
         runAsNonRoot: true
+        runAsUser: 1000
         allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        readOnlyRootFilesystem: true
       volumeMounts:
       - name: pqc-audit-worm
         mountPath: /var/log/sentinel

@@ -61,7 +61,7 @@ class OmniSentinel24hMonitor:
 
     def create_checkpoint(self):
         timestamp = time.time()
-        checkpoint_id = hashlib.sha256(f"checkpoint_{timestamp}".encode()).hexdigest()[:12]
+        checkpoint_id = hashlib.sha3_512(f"checkpoint_{timestamp}".encode()).hexdigest()[:12]
         checkpoint = {
             "checkpoint_id": checkpoint_id,
             "timestamp": timestamp,

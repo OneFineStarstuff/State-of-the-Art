@@ -15,9 +15,19 @@ spec:
       labels:
         app: omni-sentinel-monitor
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 2000
       containers:
       - name: monitor
         image: sentinel-internal/omni-monitor:v1.2.0
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
         env:
         - name: MONITOR_INTERVAL
           value: "300"
@@ -30,6 +40,10 @@ spec:
         volumeMounts:
         - name: sentinel-logs
           mountPath: /var/log/sentinel
+        - name: tmp
+          mountPath: /tmp
       volumes:
       - name: sentinel-logs
+        emptyDir: {}
+      - name: tmp
         emptyDir: {}
