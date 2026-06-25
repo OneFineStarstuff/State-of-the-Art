@@ -20,10 +20,10 @@
 
  [![Create Release](https://img.shields.io/badge/Create_Release-dc2626.svg)](https://codefair.io/dashboard/OneFineStarstuff/State-of-the-Art/release/zenodo)
 
- <sub><span style="color: grey;">Last updated Mar 6 2025, 04:56:31 (timezone: America/Los_Angeles)</span></sub>
+ <sub><span style="color: grey;">Last updated Jun 25 2026, 05:27:00 (timezone: UTC)</span></sub>
 
 ## Governance Posture ✔️
 
-Omni-Sentinel Governance Framework (MAS FEAT & HKMA Ethics) is active and verified as of June 2026.
+Omni-Sentinel Governance Framework (MAS FEAT & HKMA Ethics) is active and verified as of June 25, 2026.
 
 [![Governance Status](https://img.shields.io/badge/Governance-VERIFIED-4edea3.svg)](REPORTS/GLOBAL_REGULATORY_GAP_ANALYSIS.md)
